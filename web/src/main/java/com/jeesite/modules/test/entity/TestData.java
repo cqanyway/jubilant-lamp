@@ -9,7 +9,7 @@ import com.jeesite.common.mybatis.annotation.JoinTable;
 import com.jeesite.common.mybatis.annotation.JoinTable.Type;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jeesite.modules.sys.entity.User;
-import com.jeesite.modules.sys.entity.Office;
+//import com.jeesite.modules.sys.entity.Office;
 import java.util.List;
 import com.jeesite.common.collect.ListUtils;
 
@@ -44,11 +44,11 @@ import com.jeesite.common.mybatis.mapper.query.QueryType;
 				@Column(name="user_code", label="用户编码", isPK=true),
 				@Column(name="user_name", label="用户名称", isQuery=false),
 		}),
-		@JoinTable(type=Type.LEFT_JOIN, entity=Office.class, attrName="testOffice", alias="u11",
-			on="u11.office_code = a.test_office_code", columns={
-				@Column(name="office_code", label="机构编码", isPK=true),
-				@Column(name="office_name", label="机构名称", isQuery=false),
-		}),
+//		@JoinTable(type=Type.LEFT_JOIN, entity=Office.class, attrName="testOffice", alias="u11",
+//			on="u11.office_code = a.test_office_code", columns={
+//				@Column(name="office_code", label="机构编码", isPK=true),
+//				@Column(name="office_name", label="机构名称", isQuery=false),
+//		}),
 	}, orderBy="a.update_date DESC"
 )
 public class TestData extends DataEntity<TestData> {
@@ -63,7 +63,7 @@ public class TestData extends DataEntity<TestData> {
 	private Date testDate;		// 日期选择
 	private Date testDatetime;		// 日期时间
 	private User testUser;		// 用户选择
-	private Office testOffice;		// 机构选择
+//	private Office testOffice;		// 机构选择
 	private String testAreaCode;		// 区域选择
 	private String testAreaName;		// 区域名称
 	private List<TestDataChild> testDataChildList = ListUtils.newArrayList();		// 子表列表
@@ -156,13 +156,13 @@ public class TestData extends DataEntity<TestData> {
 		this.testUser = testUser;
 	}
 	
-	public Office getTestOffice() {
-		return testOffice;
-	}
+//	public Office getTestOffice() {
+//		return testOffice;
+//	}
 
-	public void setTestOffice(Office testOffice) {
-		this.testOffice = testOffice;
-	}
+//	public void setTestOffice(Office testOffice) {
+//		this.testOffice = testOffice;
+//	}
 	
 	@Length(min=0, max=64, message="区域选择长度不能超过 64 个字符")
 	public String getTestAreaCode() {

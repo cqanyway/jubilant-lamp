@@ -29,25 +29,33 @@
 	</properties>
 
 	<dependencies>
-		
 		<!-- 核心模块 -->
 		<dependency>
 			<groupId>com.jeesite</groupId>
 			<artifactId>jeesite-module-core</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		<!-- 在线文档 -->
+		<!-- Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<!-- 自定义jar依赖包演示
+
 		<dependency>
 			<groupId>com.jeesite</groupId>
 			<artifactId>jeesite-module-swagger</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
-		<!-- Spring Boot -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
+			<groupId>com.jeesite</groupId>
+			<artifactId>test-core</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/test-core-1.0.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
@@ -59,15 +67,7 @@
 			<artifactId>spring-beans</artifactId>
 			<version>5.0.8.RELEASE</version>
 		</dependency>
-
-		<!-- 自定义jar依赖包演示
-		<dependency>
-			<groupId>com.jeesite</groupId>
-			<artifactId>test-core</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/test-core-1.0.jar</systemPath>
-		</dependency> -->
+		-->
 		
 	</dependencies>
 	
